@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Aigner, Paul</title>
+
+   <!-- Google Fonts -->
+    <link href="./Aigner, Paul_v4_files/css2" rel="stylesheet">
+
+    <script type="text/javascript" async="" defer="" src="file://matomo.acdh.oeaw.ac.at/piwik.js"></script><script type="text/javascript" async="" defer="" src="file://matomo.acdh.oeaw.ac.at/piwik.js"></script><script type="text/javascript" async="" defer="" src="./Aigner, Paul_v4_files/piwik.js"></script><script src="./Aigner, Paul_v4_files/jquery.slim.min.js"></script>
+    <script src="./Aigner, Paul_v4_files/nouislider.min.js"></script>
+    <link rel="stylesheet" href="./Aigner, Paul_v4_files/nouislider.min.css">
+    <!-- Custom styles for this template -->
+    <script src="./Aigner, Paul_v4_files/feather.min.js"></script>
+    <!--<link rel="stylesheet" href="/static/theme/css/main.css" />-->
+    <link rel="stylesheet" href="./Aigner, Paul_v4_files/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="./Aigner, Paul_v4_files/datatables.min.css">
+
+    
+    <link href="./Aigner, Paul_v4_files/assets.css" rel="stylesheet" type="text/css">
+    <link href="./Aigner, Paul_v4_files/style.css" rel="stylesheet" type="text/css">
+
+
+    <!--
+      this global event bus is used as a simple
+      means of communication between components.
+    -->
+    <script type="text/javascript">
+    class EventBus {
+      constructor() {
+        this.bus = document.createElement('fakeelement');
+      }
+      on(event, callback) {
+        this.bus.addEventListener(event, callback)
+      }
+      off(event, callback) {
+        this.bus.removeEventListener(event, callback);
+      }
+      emit(event, detail = {}) {
+        this.bus.dispatchEvent(new CustomEvent(event, { detail }));
+      }
+    }
+    window.eventBus = new EventBus()
+    </script>
+
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+      window.cookieconsent_options = {
+          "message":"This website uses cookies to ensure you get the best experience on our website",
+          "dismiss":"Got it!",
+          "learnMore":"More info",
+          "link":"/imprint",
+          "theme":"dark-bottom"};
+    </script>
+    <script type="text/javascript" src="./Aigner, Paul_v4_files/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
+        <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//matomo.acdh.oeaw.ac.at/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '99']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+
+
+    
+<script src="./Aigner, Paul_v4_files/spin.min.js"></script><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
+<script crossorigin="" src="./Aigner, Paul_v4_files/react.production.min.js"></script>
+<script crossorigin="" src="./Aigner, Paul_v4_files/react-dom.production.min.js"></script>
+<script crossorigin="" src="./Aigner, Paul_v4_files/three.min.js"></script>
+<script crossorigin="" src="./Aigner, Paul_v4_files/network-visualization.umd.js"></script><style></style><style></style><style></style><style type="text/css">.graph-tooltip {
+  position: absolute;
+  transform: translate(-50%, 25px);
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 3px;
+  color: #eee;
+  background: rgba(0,0,0,0.65);
+  visibility: hidden; /* by default */
+}
+
+.grabbable {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.grabbable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+</style><style type="text/css">canvas{display:block}.graph-tooltip,.scene-tooltip{background-color:hsla(0,0%,100%,.65)!important;border-radius:2px;color:rgba(0,0,0,.75)!important;font-size:15px;padding:2px 4px}</style><style type="text/css">.scene-nav-info {
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  color: slategrey;
+  opacity: 0.7;
+  font-size: 10px;
+}
+
+.scene-tooltip {
+  color: lavender;
+  font-size: 15px;
+}
+
+.scene-nav-info, .scene-tooltip {
+  position: absolute;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+.scene-container canvas:focus {
+  outline: none;
+}</style><style type="text/css">.graph-info-msg {
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: lavender;
+  opacity: 0.7;
+  font-size: 22px;
+  position: absolute;
+  font-family: Sans-serif;
+}
+
+.grabbable {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.grabbable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}</style><style></style><style></style>
+    
+
+
+
+<script src="./Aigner, Paul_v4_files/leaflet.js"></script>
+
+
+
+<script src="./Aigner, Paul_v4_files/leaflet.extras.js"></script>
+<script>
+    
+    L.Control.ResetView.TITLE = "Reset view";
+    L.Control.ResetView.ICON = "url(/static/leaflet/images/reset-view.png)";
+    
+</script>
+
+
+<link rel="stylesheet" href="./Aigner, Paul_v4_files/leaflet.css">
+<style>.leaflet-container-default {min-height: 300px;}</style>
+
+
+
+<script type="text/javascript">(async function() { class ReadwiseElement extends HTMLElement {
+      constructor() {
+        super();
+
+        [...this.children].forEach((child) => this.appendChild(child));
+      }
+    }
+
+    try {
+      customElements.define(
+        "readwise-tooltip-container",
+        class ReadwiseTooltipContainer extends ReadwiseElement {},
+        {"extends":"div"},
+      );
+    } catch (e) {
+      if(!e.message.includes("already been defined")
+        && !e.message.includes("already been used with this registry")) {
+        console.error("Failed to define custom element", e);
+        throw e;
+      }
+    } })()</script><script type="text/javascript">document.body.appendChild(document.createElement("readwise-tooltip-container"));</script><script type="text/javascript">(async function() { class ReadwiseElement extends HTMLElement {
+      constructor() {
+        super();
+
+        [...this.children].forEach((child) => this.appendChild(child));
+      }
+    }
+
+    try {
+      customElements.define(
+        "rw-highlight",
+        class ReadwiseHighlight extends ReadwiseElement {},
+        {"extends":"mark"},
+      );
+    } catch (e) {
+      if(!e.message.includes("already been defined")
+        && !e.message.includes("already been used with this registry")) {
+        console.error("Failed to define custom element", e);
+        throw e;
+      }
+    } })()</script><link rel="stylesheet" type="text/css" href="file://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/dark-bottom.css"><link rel="stylesheet" type="text/css" href="file://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/dark-bottom.css"></head>
+
+<body id="body" data-searchtype="erw" class="oebl-background-grey">
+<div class="hfeed site" id="page">
+    <!-- NAVBAR
+================================================== -->
+    <!-- ******************* The Navbar Area ******************* -->
+      <div class="wrapper-fluid wrapper-navbar sticky-navbar" id="wrapper-navbar" itemscope="" itemtype="http://schema.org/WebSite">
+        <a class="skip-link screen-reader-text sr-only" href="http://localhost:8000/person/164563#content">Skip to content</a>
+        <nav class="navbar navbar-expand-lg navbar-dark oebl-inverted">
+          <div class="container">
+            <a href="http://localhost:8000/" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="./Aigner, Paul_v4_files/logo.svg" class="img-fluid" alt="Oebl Logo" itemprop="logo"></a><!-- end custom logo -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <!-- Your menu goes here -->
+              <ul id="main-menu" class="navbar-nav text-uppercase font-weight-bold">
+                <!--<li class="nav-item dropdown">
+                  <a title="Dropdown" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Entities <span class="caret"></span></a>
+                  <ul class=" dropdown-menu" role="menu">
+                    <li class="nav-item dropdown-submenu">
+                        
+                      <a title="Event" href="/apis/entities/entity/event/list/" class="nav-link">Event</a>
+                      
+                      <a title="Institution" href="/apis/entities/entity/institution/list/" class="nav-link">Institution</a>
+                      
+                      <a title="Person" href="/apis/entities/entity/person/list/" class="nav-link">Person</a>
+                      
+                      <a title="Place" href="/apis/entities/entity/place/list/" class="nav-link">Place</a>
+                      
+                      <a title="Work" href="/apis/entities/entity/work/list/" class="nav-link">Work</a>
+                      
+                      <a title="URIS" href="/apis/metainfo/apis/metainfo/uri/" class="nav-link">URIs</a>
+                    </li>
+                  </ul>
+                </li>-->
+                <li class="nav-item"><a title="Suche" href="http://localhost:8000/search/%3F" class="nav-link">Suche</a></li>
+                <li class="nav-item"><a title="UeberOEBL" href="http://localhost:8000/about/" class="nav-link">Über das ÖBL</a></li>
+                <li class="nav-item"><a title="Kontakt" href="http://localhost:8000/contact/" class="nav-link">Kontakt</a></li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="http://localhost:8000/search" role="search">
+                <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Volltextsuche" value="" autocomplete="off">
+                <button type="submit" class="navbar-search-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+              </form>
+            </div>
+            <!-- .collapse navbar-collapse -->
+          </div>
+          <!-- .container -->
+        </nav>
+        <!-- .site-navigation -->
+      </div>
+      <!-- .wrapper-navbar end -->
+      <div class="h-100">
+
+
+	      
+<div id="contentDetails" class="container pt-5">
+  <div class="row bg-white p-5">
+    <div class="col-md-12 pb-4">
+      <div class="row justify-content-between">
+        <div class="col-md-auto">
+          
+          <a class="card-link preventity entitypaging" href="http://localhost:8000/person/147956" title="Sauer, Hedda">
+            ← Sauer, Hedda
+          </a>
+          
+        </div>
+        <div class="col"></div>
+        <div class="col-md-auto">
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 pr-5">
+      <article class="bio">
+        <div class="entry-header">
+          <div class="row">
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <div class="pr-1">
+                <h2 class="font-weight-bold">Aigner, Paul</h2>
+                
+                <p class="profession-date-of-birth"></p><ul style="list-style-type: none;padding: 0;">
+    <li>Grafiker und Maler</li>
+    <li><abbr title="Geboren">Geb.</abbr> Wien, Niederösterreich (Wien), 23. 5. 1905</li>
+    <li><abbr title="Gestorben">Gest.</abbr> Chieming am Chiemsee, Bundesrepublik Deutschland, 19. 10. 1984</li>
+</ul><p></p>
+              <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div><div class="dataTables_paginate paging_simple" id="DataTables_Table_0_paginate"></div><table class="table table-sm small reltable w-100 dataTable no-footer dtr-inline" id="DataTables_Table_0" style="width: 0px;">
+        <thead>
+            <tr><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th></tr></thead>
+        <tbody>
+            
+            
+            
+            
+            
+        <tr class="odd">
+                <td class="p-1 dtr-control" tabindex="0">Religion</td>
+                <td>röm.-kath</td>
+                
+            </tr><tr class="even">
+                <td class="p-1 dtr-control" tabindex="0">Mutter</td>
+                <td>Stefanie Aigner, unverheiratet (geb. Wien 9. 12. 1880)</td>
+                
+            </tr><tr class="odd">
+                <td class="p-1 dtr-control" tabindex="0">Vater</td>
+                <td>unbekannt</td>
+                
+            </tr></tbody>
+    </table></div></div></div>
+              <div style="min-width:fit-content;float: left;">
+              <a href="https://via.placeholder.com/240x300" data-lightbox="image-1" data-title="Optional &lt;a target=&#39;_blank&#39; rel=&#39;noopener noreferrer&#39; href=&#39;http://google.com&#39;&gt;caption&lt;/a&gt;."><img src="./Aigner, Paul_v4_files/portrait_aigner.png" height="120" width="180"></a>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div id="main-bio-text" class="card-body p-0 pt-3">
+          
+          <p class="p-0">Aigner wuchs in einfachen Verhältnissen in <mark class="highlight hl_text_6656" data-hl-type="simple" data-hl-start="43" data-hl-end="60" data-hl-text-id="83042" data-hl-ann-id="27917" data-entity-class="PersonPlace" data-entity-pk="164568" data-related-entity-pk="164563,117454" data-entity-type="apis_relations" data-user-added="se">Wien-Leopoldstadt</mark> auf. Über seine frühen Jahre ist wenig bekannt. Als Grafiker war er Autodidakt, eine akademische Ausbildung ist nicht belegt. Aigners Karriere als Plakatkünstler begann wohl um 1930 und entwickelte sich langsam in den Folgejahren. Die Machtübernahme der NSDAP 1938 in Österreich änderte nichts an seiner Beschäftigungslage. Um 1943 wurde er zum Kriegsdienst eingezogen und geriet in russische Gefangenschaft. Aufgrund seiner wieder aufgenommenen Tätigkeit als Grafiker ist nachvollziehbar, dass er spätestens 1947 zurück in <mark class="highlight hl_text_6656" data-hl-type="simple" data-hl-start="585" data-hl-end="589" data-hl-text-id="83042" data-hl-ann-id="27918" data-entity-class="PersonPlace" data-entity-pk="164569" data-related-entity-pk="164563,117454" data-entity-type="apis_relations" data-user-added="se">Wien</mark> war. Obwohl er eine enge Zusammenarbeit mit der <mark class="highlight hl_text_6652" data-hl-type="simple" data-hl-start="638" data-hl-end="660" data-hl-text-id="83042" data-hl-ann-id="27919" data-entity-class="PersonInstitution" data-entity-pk="164572" data-related-entity-pk="164570,164563" data-entity-type="apis_relations" data-user-added="se">Kommunistischen Partei</mark> begann, für die er eine Reihe von Büchern sowie Zeitschriften illustrierte und später auch Plakate entwarf, gestaltete Aigner ab 1949 auch regelmäßig für die <mark class="highlight hl_text_6652" data-hl-type="simple" data-hl-start="819" data-hl-end="846" data-hl-text-id="83042" data-hl-ann-id="27920" data-entity-class="PersonInstitution" data-entity-pk="164574" data-related-entity-pk="164573,164563" data-entity-type="apis_relations" data-user-added="se">Österreichische Volkspartei</mark> Wahlplakate, auf denen vor der „roten Gefahr“ gewarnt wurde.<br><br>In den 1950er-Jahren avancierte er zu einem der gefragtesten Pin-up-Plakatkünstler Österreichs. Er entwarf etliche Filmplakate, aber auch Wirtschaftswerbeplakate etwa für Wäschehersteller, Getränkemarken oder Hygieneartikel (z. B. <mark class="highlight hl_text_6652" data-hl-type="simple" data-hl-start="1142" data-hl-end="1149" data-hl-text-id="83042" data-hl-ann-id="27921" data-entity-class="PersonInstitution" data-entity-pk="164576" data-related-entity-pk="164575,164563" data-entity-type="apis_relations" data-user-added="se">Palmers</mark>, Kajak-Bademode, <mark class="highlight hl_text_6652" data-hl-type="simple" data-hl-start="1167" data-hl-end="1174" data-hl-text-id="83042" data-hl-ann-id="27922" data-entity-class="PersonInstitution" data-entity-pk="164580" data-related-entity-pk="164577,164563" data-entity-type="apis_relations" data-user-added="se">Sinalco</mark>, Odol). Dabei machte es keinen Unterschied, ob Wäsche oder Mundwasser beworben werden sollte, seine Frauen sind immer von strahlender Schönheit. Die laszive Darstellung führte aber wiederholt dazu, dass Plakate zensuriert wurden. Kollegen, wie etwa <mark class="highlight hl_text_5420" data-hl-type="simple" data-hl-start="1424" data-hl-end="1438" data-hl-text-id="83042" data-hl-ann-id="27915" data-entity-class="PersonPerson" data-entity-pk="164565" data-related-entity-pk="164563,164564" data-entity-type="apis_relations" data-user-added="se">Alfred Proksch</mark>, bezeichneten Aigner als Naturtalent. Die Gestaltung der Titelschriftzüge gehörte allerdings nicht zu seinen Stärken, so erzählten die Grafiker <mark class="highlight hl_text_5420" data-hl-type="simple" data-hl-start="1583" data-hl-end="1597" data-hl-text-id="83042" data-hl-ann-id="27916" data-entity-class="PersonPerson" data-entity-pk="164567" data-related-entity-pk="164563,164566" data-entity-type="apis_relations" data-user-added="se">Eduard Paryzek</mark> und Johnny Parth in Interviews, dass mitunter sie die Schrift zum Bild setzten.<br><br>1948 gewann er bei einem Plakatwettbewerb zur touristischen Bewerbung Österreichs in der Kategorie Winterplakat mit dem Bild eines lächelnden Mädchens, das Reste eines Schneeballs in Gesicht und Haar trägt. Das Plakat erzielte im selben Jahr auch beim internationalen Wettbewerb für Fremdenverkehrsplakate in Paris den ersten Preis. Die Verantwortlichen der Stelle für den Wiederaufbau der österreichischen Fremdenverkehrswirtschaft waren so überzeugt von Aigners Werk, dass er ohne weitere Ausschreibung die Aufträge für zwei weitere Plakate erhielt, was bald auf Kritik stieß. Zudem tauchte der Vorwurf auf, dass die Arbeit in Wahrheit ein Plagiat sei, da Aigner für sein Plakat eine Fotografie aus einer Zeitschrift als Vorlage benutzt hatte. Der von Aigner angestrengte Ehrenbeleidigungsprozess endete jedoch mit einem Urteil zu seinen Gunsten.<br><br>Nachdem auch das Filmgeschäft wieder zu boomen begonnen hatte, konnte Aigner an seine künstlerischen Wurzeln, zum Kinoplakat, zurückkehren (z. B. „Hallo Dienstmann“, „Die Geierwally“). Ab der zweiten Hälfte der 1950er-Jahre begann er für deutsche Illustrierte, wie etwa die „Revue“ oder das Jugendmagazin „<mark class="highlight hl_text_6652" data-hl-type="simple" data-hl-start="2839" data-hl-end="2844" data-hl-text-id="83042" data-hl-ann-id="27923" data-entity-class="PersonInstitution" data-entity-pk="164582" data-related-entity-pk="164581,164563" data-entity-type="apis_relations" data-user-added="se">Bravo</mark>“, als Illustrator zu arbeiten. Damals übersiedelte er nach Bayern, wo er bis zu seinem Lebensende blieb.<br><br>1957 erhielt Aigner den Auftrag, für die deutsche Bundestagswahl jenes Jahres ein Porträtplakat für <mark class="highlight hl_text_5420" data-hl-type="simple" data-hl-start="3053" data-hl-end="3068" data-hl-text-id="83042" data-hl-ann-id="27924" data-entity-class="PersonPerson" data-entity-pk="164584" data-related-entity-pk="164563,164583" data-entity-type="apis_relations" data-user-added="se">Konrad Adenauer</mark>, den amtierenden Kanzler und Spitzenkandidaten von CDU/CSU, zu entwerfen. Als versiertem Zeichner gelang es ihm, den 81-Jährigen durchaus realistisch, aber doch etwas verjüngt und mit einem dynamischen Flair darzustellen. Darüber hinaus schuf Aigner ähnliche Porträts für die Plakate weiterer christdemokratischer Kandidaten. Bis auf ein paar Ausnahmen hatten die handgezeichneten Grafiken auf Plakaten und in den Magazinen in den 1960er-Jahren jedoch ausgedient. Fotografien hatten in relativ kurzer Zeit die Herrschaft über die Werbeszene übernommen, da sie kostengünstiger und nun auch drucktechnisch in einwandfreier Qualität reproduzierbar waren. Daher verlagerte Aigner sein Tätigkeitsfeld auf konservativ-nostalgisch gehaltene Ölgemälde für den lokalen, aber durchaus lukrativen bayrischen Kunstmarkt.<br><br>Ein Teilnachlass befindet sich in der Österreichischen Nationalbibliothek.</p>
+          
+        </div>
+        <div class="mt-5 text-light">
+          <hr class="m-5">
+          <i>Werke:</i> Anita Kern, Grafikdesign in Österreich im 20. Jahrhundert, 2008, s. Reg.; Peter Payer (Hg.), Filme malen. Der Wiener Plakatmaler Eduard Paryzek, Pustet, Salzburg 2010, S. 68; Bernhard Denscher, Paul Aigner – Von Konrad Adenauer, Pin-ups und Kommunisten, in: Preis des Deutschen Plakat Museums, Essen 2017, S. 18ff.; Bernhard Denscher, Paul Aigner – Der filmische Blick in der Werbung, in: designaustria mitteilungen, 2018, H. 2, S. 4ff.; https://www.austrianposters.at/2017/10/21/paul-aigner/ (Zugriff 27. 9. 2022); https://www.wienbibliothek.at/bestaende-sammlungen/objekte-monats/objekte-monats-2011/objekt-monats-februar-2011-wintersports (Zugriff 27. 9. 2022).<br>
+          
+          
+          
+        </div>
+      </article>
+    </div>
+    <div id="right-pane" class="col-md-4">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item p-0 font-weight-bold" role="presentation">
+          <a class="nav-link rounded-0 p-1 active text-uppercase" data-toggle="tab" id="daten-tab" href="http://localhost:8000/person/164563#daten" role="tab" aria-controls="home" aria-selected="true">Daten</a>
+        </li>
+        <li class="nav-item p-0 font-weight-bold" role="presentation">
+          <a class="nav-link rounded-0 p-1 text-uppercase" data-toggle="tab" id="map-tab" href="http://localhost:8000/person/164563#map" role="tab" aria-controls="map" aria-selected="false">Karte</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="tabcontent">
+        <div class="tab-pane fade show active" id="daten" role="tabpanel" aria-labelledby="data-tab">
+          <div class="pt-2">
+            
+            
+              
+<button class="btn btn-sm border collapsebtn btn-oebl-grey w-100 d-block rounded-0 text-uppercase" data-toggle="collapse" data-target="#collapsePlc" aria-expanded="true" aria-controls="collapsePlc">
+    2  Orte 
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down chevron-down float-right"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div id="collapsePlc" class="collapse show">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div><div class="dataTables_paginate paging_simple" id="DataTables_Table_0_paginate"></div><div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div><div class="dataTables_paginate paging_simple" id="DataTables_Table_0_paginate"></div><div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div><div class="dataTables_paginate paging_simple" id="DataTables_Table_0_paginate"><ul class="pagination pagination-sm d-flex justify-content-between"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li></ul></div><table class="table table-sm small reltable w-100 dataTable no-footer dtr-inline" id="DataTables_Table_0" style="width: 0px;">
+        <thead>
+            <tr><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th></tr></thead>
+        <tbody>
+            
+            
+            
+            
+            
+        <tr class="odd">
+                <td class="p-1 dtr-control" tabindex="0">wirkte/forschte/hielt sich auf in</td>
+                <td>Wien</td>
+                <td></td>
+            </tr><tr class="even">
+                <td class="p-1 dtr-control" tabindex="0">wirkte/forschte/hielt sich auf in</td>
+                <td>Wien</td>
+                <td>1947</td>
+            </tr></tbody>
+    </table></div></div></div></div></div></div>
+</div>
+            
+            
+              
+<button class="btn btn-sm border collapsebtn btn-oebl-grey w-100 d-block rounded-0 text-uppercase" data-toggle="collapse" data-target="#collapsePlc" aria-expanded="true" aria-controls="collapsePlc">
+    5  Institutionen 
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down chevron-down float-right"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div id="collapsePlc" class="collapse show">
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div><div class="dataTables_paginate paging_simple" id="DataTables_Table_1_paginate"></div><div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div><div class="dataTables_paginate paging_simple" id="DataTables_Table_1_paginate"></div><div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div><div class="dataTables_paginate paging_simple" id="DataTables_Table_1_paginate"><ul class="pagination pagination-sm d-flex justify-content-between"><li class="paginate_button page-item previous disabled" id="DataTables_Table_1_previous"><a href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html#" aria-controls="DataTables_Table_1" data-dt-idx="0" tabindex="0" class="page-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></li><li class="paginate_button page-item next disabled" id="DataTables_Table_1_next"><a href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html#" aria-controls="DataTables_Table_1" data-dt-idx="1" tabindex="0" class="page-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li></ul></div><table class="table table-sm small reltable w-100 dataTable no-footer dtr-inline" id="DataTables_Table_1" style="width: 0px;">
+        <thead>
+            <tr><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"></th></tr></thead>
+        <tbody>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        <tr class="odd">
+                <td class="p-1 dtr-control" tabindex="0">war tätig für/wirkte an/bei</td>
+                <td>Kommunistische Partei Österreichs</td>
+                <td></td>
+            </tr><tr class="even">
+                <td class="p-1 dtr-control" tabindex="0">war tätig für/wirkte an/bei</td>
+                <td>Österreichische Volkspartei</td>
+                <td></td>
+            </tr><tr class="odd">
+                <td class="p-1 dtr-control" tabindex="0">war tätig für/wirkte an/bei</td>
+                <td>Palmers Aktiengesellschaft</td>
+                <td></td>
+            </tr><tr class="even">
+                <td class="p-1 dtr-control" tabindex="0">war tätig für/wirkte an/bei</td>
+                <td>Sinalco-Aktiengesellschaft</td>
+                <td></td>
+            </tr><tr class="odd">
+                <td class="p-1 dtr-control" tabindex="0">war tätig für/wirkte an/bei</td>
+                <td>Bravo (Zeitschrift)</td>
+                <td></td>
+            </tr></tbody>
+    </table></div></div></div></div></div></div>
+</div>
+            
+          </div>
+        </div>
+        <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+          <div class="inline-map card-inner relentitiescard card-vertical d-flex flex-column justify-content-between">
+            <a style="position: absolute; right: 10px; top: 10px; z-index: 1000; cursor: pointer" class="leaflet-control-zoom-in" role="button" onclick="move_map()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize-2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+            </a>
+            
+
+<div id="main" class="leaflet-container-default leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v2_files/0.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-128px, -128px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(128px, 128px, 0px) scale(0.5);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://localhost:8000/person/164563#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-disabled" href="http://localhost:8000/person/164563#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-out leaflet-bar-part" href="http://localhost:8000/person/164563#" title="Reset view" style="background-image: url(&quot;/static/leaflet/images/reset-view.png&quot;);"></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 64px;">10000 km</div></div></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="file://a.tile.openstreetmap.org/0/0/0.png" class="leaflet-tile" style="width: 256px; height: 256px; transform: translate3d(-128px, -128px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(128px, 128px, 0px) scale(0.5);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v2.html#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-disabled" href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v2.html#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-out leaflet-bar-part" href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v2.html#" title="Reset view" style="background-image: url(&quot;/static/leaflet/images/reset-view.png&quot;);"></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 64px;">10000 km</div></div></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="file://a.tile.openstreetmap.org/0/0/0.png" class="leaflet-tile" style="width: 256px; height: 256px; transform: translate3d(-128px, -128px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(128px, 128px, 0px) scale(0.5);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-disabled" href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-out leaflet-bar-part" href="file:///home/sennierer/presentations/SAB%20%C3%96BL/Aigner,%20Paul_v3.html#" title="Reset view" style="background-image: url(&quot;/static/leaflet/images/reset-view.png&quot;);"></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 64px;">10000 km</div></div></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div></div>
+<script>
+(function () {
+
+    function loadmap() {
+        var djoptions = {"srid": null, "extent": [[-90, -180], [90, 180]], "fitextent": true, "center": null, "zoom": null, "precision": 6, "minzoom": null, "maxzoom": null, "layers": [["OSM", "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", "\u00a9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"]], "overlays": [], "attributionprefix": null, "scale": "metric", "minimap": false, "resetview": true, "tilesextent": []},
+            options = {djoptions: djoptions, initfunc: loadmap,
+                       globals: false, callback: null},
+            map = L.Map.djangoMap('main', options);
+        
+    }
+    var loadevents = ["load"];
+    if (loadevents.length === 0) loadmap();
+    else if (window.addEventListener) for (var i=0; i<loadevents.length; i++) window.addEventListener(loadevents[i], loadmap, false);
+    else if (window.jQuery) jQuery(window).on(loadevents.join(' '), loadmap);
+    
+})();
+</script>
+
+
+            
+<div id="spacetime-graph-content">
+  <h4>Lifeline</h4>
+  <div id="spacetime-graph_person_164563" class="spacetime-graph"><svg preserveAspectRatio="xMinYMin meet" viewBox="-50 -50 400 750" class="svg-content" style="padding: 0px; margin: 0px;"><g class="axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end" style="font: 16px Montserrat;"><path class="domain" stroke="currentColor" d="M-6,0.5H0.5V600.5H-6"></path></g><g><path class="lifeline"></path></g><g></g></svg></div>
+</div>
+<script type="module">
+  import 'https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js'  
+  import 'https://cdn.jsdelivr.net/npm/geolib@3.3.1/lib/index.min.js'
+
+  const width = 250
+  const height = 600
+  const margin = 0
+  const padding = 0
+  const adj = 50
+
+  const data = fetch('/apis/api2/lifepath/164563/')
+    .then(response => response.json())
+    .then(drawLifepath)
+
+
+  function getBB(sel) {
+    sel.each(function(d){
+      d.bbox = this.getBBox()
+    })
+  }
+
+  function hasOverlap(bbA, bbs) {
+    return bbs.find((bbB) => {
+      return !(
+        ((bbA.y + bbA.height) < (bbB.y)) ||
+        (bbA.y > (bbB.y + bbB.height)) ||
+        ((bbA.x + bbA.width) < bbB.x) ||
+        (bbA.x > (bbB.x + bbB.width))
+      )
+    }) !== undefined
+  }
+
+  function onCircleMouseOver(...e) {
+    if (window.eventBus) {
+      window.eventBus.emit('spacetime.mouseover', e)
+    }
+  }
+
+  function onCircleMouseOut(...e) {
+    if (window.eventBus) {
+      window.eventBus.emit('spacetime.mouseout', e)
+    }
+  }
+
+  function drawLifepath(data) {
+    const b = data.reduce((m, e, i, l) => {
+      if (i === 0) {
+        return m.concat({ ...e, distance: 0, x: 0 })
+      } else {
+        const distance = geolib.getDistance(
+          {
+            latitude: e.coords[0],
+            longitude: e.coords[1]
+          },
+          {
+            latitude: l[i -1].coords[0],
+            longitude: l[i - 1].coords[1]
+          }
+        )
+        return m.concat({
+          ...e, 
+          distance,
+          x: m[i - 1].x + distance * (i % 2 === 0 ? 1 : -1)
+        })
+      }
+    }, [])
+
+    const xs = b.map(x => x.x)
+    const years = b.map(x => x.year)
+
+    const [ minX, maxX ] = [Math.min(...xs), Math.max(...xs)]
+    const [ minY, maxY ] = [Math.min(...years), Math.max(...years)]
+
+    const yScale = d3.scaleLinear().domain([minY, maxY]).rangeRound([ 0, height ])
+    const xScale = d3.scaleLinear().domain([minX, maxX]).rangeRound([ 0, width ])
+
+    const yAxis = d3.axisLeft().scale(yScale).tickFormat(x => x)
+
+    const line = d3.line()
+      .x(d => xScale(d.x))
+      .y(d => yScale(d.year))(b)
+
+    const svg = d3
+      .select('#spacetime-graph_person_164563')
+      .append('svg')
+      .attr('preserveAspectRatio', 'xMinYMin meet')
+      .attr('viewBox', `-${ adj } -${ adj } ${ width + adj * 3 } ${ height + adj * 3 }`)
+      .style('padding', padding)
+      .style('margin', margin)
+      .classed('svg-content', true)
+
+    svg.append('g')
+      .style('font', '16px Montserrat')
+      .attr('class', 'axis')
+      .call(yAxis)
+
+    svg.append('g')
+      .append('path')
+      .attr('class', 'lifeline')
+      .attr('d', line)
+
+    function computeLabelPositions(labelSize, offset) {
+      const labels = b.map(d => ({
+        targetX: xScale(d.x) + offset,
+        targetY: yScale(d.year) - offset,
+        data: d
+      }))
+
+      // Set up the force simulation
+      const force = d3.forceSimulation()
+        .nodes(labels)
+        .force('collide', d3.forceCollide(labelSize))
+        .force('x', d3.forceX(d => d.targetX).strength(1))
+        .force('y', d3.forceY(d => d.targetY).strength(1))    
+        .stop();
+
+      for (let i = 0; i < 300; i++) force.tick();
+      return labels
+    }
+
+    const labels = computeLabelPositions(30, 30)
+
+    svg.append('g')
+      .selectAll('labels')
+      .data(labels)
+      .enter()
+      .append('g')
+        .attr('class', 'circle-label')
+        .append('circle')
+          .attr('cx', d => xScale(d.data.x))
+          .attr('cy', d => yScale(d.data.year))
+          .attr('apis:relid', d => d.data.id)
+          .attr('r', 15)
+          .style('fill', '#69b3a2')
+          .style('opacity', 0.3)
+          .style('stroke', 'white')
+          .on('mouseover', (...e) => {
+            onCircleMouseOver(e)
+            document.querySelector('.spacetime-graph').classList.add('dot-hover')
+          })
+          .on('mouseout', (e) => {
+            onCircleMouseOut(e)
+            document.querySelector('.spacetime-graph').classList.remove('dot-hover')
+          })
+          .select(function() { return this.parentNode })
+        .append('g')
+          .attr('class', 'label-text')
+          .append('text')
+            .attr('text-anchor', 'middle')
+            .attr('x', d => d.x)
+            .attr('y', d => d.y)
+            .append('tspan')
+              .text(d => d.data.year)
+              .select(function() { return this.parentNode })
+            .append('tspan')
+              .attr('dy', '1.1em')
+              .attr('x', d => d.x)
+              .text(d => d.data.name)
+              .select(function() { return this.parentNode })
+            .select(function() { return this.parentNode })
+          .call((e) => {
+            const gs = e._groups[0]
+            gs.reduce((m, g, i, l) => {
+              const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
+              const bb = g.getBBox()
+              // if (hasOverlap(bb, m)) {
+              //   g.setAttribute('data-overlapping', 'true')
+              // }
+              r.setAttribute('x', bb.x)
+              r.setAttribute('y', bb.y)
+              r.setAttribute('width', bb.width)
+              r.setAttribute('height', bb.height)
+              r.style.fill = 'rgba(255,255,255,.9)'
+              g.prepend(r)
+              return m.concat(bb)
+            }, [])
+        })
+  }
+</script>
+
+<style>
+  .spacetime-graph path.lifeline {
+    fill: none;
+    stroke: #ed3700;
+    stroke-width: 4px;
+  }
+  .tooltip {
+    padding: 5px;
+    background: rgba(0,0,0,.9);
+    border-radius: 5px;
+  }
+  .label-text{
+    pointer-events: none;
+    transition: .15s;
+    transform-box: fill-box;
+    transform-origin: left bottom;
+  }
+  .dot-hover .circle-label .label-text{
+    opacity: .1;
+  }
+  .circle-label:hover .label-text, .circle-label .label-text.hover {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  .circle-label:hover circle, .circle-label circle.hover {
+    fill: red !important;
+    transform: scale(2);
+    opacity: 1;
+  }
+  circle{
+    transition: .15s;
+    transform-origin: center center;
+    transform-box: fill-box;
+  }
+</style>
+
+          </div>
+        </div>
+      </div>
+      <article>
+        <div class="card-inner relentitiescard card-vertical  d-flex flex-column justify-content-between">
+          <div class="pl-2 pt-4">
+
+            <p class="text-uppercase">Links</p>
+            <ul class="uris pl-0 font-weight-bold list-unstyled">
+              <li class="pl-0"><a target="_blank" class="text-primary" rel="noopener noreferrer" href="https://www.wikidata.org/entity/Q94910953">Wikidata</a></li>
+              
+              <li class="pl-0"><a target="_blank" class="text-primary" rel="noopener noreferrer" href="https://d-nb.info/gnd/130067873">GND</a></li>
+              
+            </ul>
+            
+            <p class="text-uppercase">Versionen</p>
+            <ul class="uris pl-0 font-weight-bold list-unstyled">
+              <li class="pl-0"><a target="_blank" class="text-primary" rel="noopener noreferrer" href="http://localhost:8000/person/164563">Version vom 15.9.1995</a></li>
+              
+              <li class="pl-0"><a target="_blank" class="text-primary" rel="noopener noreferrer" href="http://localhost:8000/person/164563">Version vom 20.11.2004</a></li>
+              
+              <li class="pl-0"><a target="_blank" class="text-primary" rel="noopener noreferrer" href="http://localhost:8000/person/164563">Version vom 9.3.2021</a></li>
+              
+            </ul>
+            
+            <p class="text-uppercase">Download</p>
+            <ul class="uris pl-0 list-unstyled font-weight-bold">
+              <li class="p-0"><a href="http://localhost:8000/apis/api2/entity/164563/?format=tei" class="text-primary" download="">XML/TEI</a></li>
+              <li class="p-0"><a href="http://localhost:8000/apis/api2/entity/164563/?format=rdf%2Bturtle" class="text-primary" download="">RDF/Turtle</a></li>
+              <li class="p-0"><a href="http://localhost:8000/apis/api2/entity/164563/?format=json" class="text-primary" download="">JSON</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+<div>
+    <div class="footer oebl-inverted">
+        <div>
+            <div class="container">
+                <footer>
+                  <div class="row pt-3 pb-3 align-items-center">
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-12">
+                      <img src="./Aigner, Paul_v4_files/logo.svg" class="img-fluid" alt="Oebl Logo" itemprop="logo"><br>
+                      <p class="m-0 mt-1 logocaption"><small>Österreichisches<br>
+                      Biographisches<br>
+                      Lexikon</small></p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-12 footermenu text-center text-uppercase">
+                    <ul class="mb-0 pl-0 list-unstyled">
+                      <li class="pb-1 pl-0"><a title="Impressum" href="http://localhost:8000/imprint/" class="nav-link">Impressum</a></li>
+                      <li class=" pl-0"><small>© Österreichische Akademie der Wissenschaften</small></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-12" style="text-align:right">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up" onclick="scrollToTop()"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                  </div>
+                  </div>
+                </footer>
+            </div>
+        </div>
+    </div>   
+  </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="./Aigner, Paul_v4_files/jquery.min.js"></script>
+    <script src="./Aigner, Paul_v4_files/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./Aigner, Paul_v4_files/bootstrap-select.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script>
+    function scrollToTop() {
+      $('body,html').animate({
+        scrollTop : 0
+    }, 500);
+    }
+    </script>
+    
+<script src="./Aigner, Paul_v4_files/lightbox.min.js"></script>
+<script type="text/javascript" src="./Aigner, Paul_v4_files/datatables.min.js"></script>   
+  
+<script>
+  $('#tabnav').on('shown.bs.tab', function (e) {
+    if (e.target.id === 'map-tab') {
+      adjustSize();
+    }
+  });
+</script>
+<script>
+  $('table').DataTable( {
+        "paging": true,
+        "searching": false,
+        "bLengthChange": false,
+        "bInfo":false,
+        "ordering": false,
+        "pagingType":"simple",
+        responsive: true,
+        "pageLength":5,
+        "dom": '<pt>',
+        language: {
+          paginate: {
+            next: '<i data-feather="chevron-right">',
+            previous: '<i data-feather="chevron-left">'
+          }
+        },
+        "drawCallback": function( settings ) {
+          feather.replace();
+          $('.dataTables_paginate > .pagination').addClass('pagination-sm d-flex justify-content-between');
+        }
+      }
+    );
+</script>
+<script>
+  const getNetworkViz = (pers_id, relationtype, t1) => {
+    document.getElementById("visualization").style.height = "400px";
+    const basePath = 'http://127.0.0.1:8000'
+    const endpoint = '/apis/api/relations/' + relationtype
+    const query = {
+      format: 'json+net',
+      related_person__id: pers_id,
+    };
+    if (relationtype == "personperson") {
+      query['related_personA__id'] = pers_id
+    }
+    const url = new URL(endpoint, basePath)
+    Object.keys(query).forEach(key => {
+      url.searchParams.set(key, query[key])
+    })
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return response.json()
+      })
+      .then(data => {
+        const edges = {}
+        const nodes = {}
+        const types = { edges: {}, nodes: {} }
+        data.results.forEach(relation => {
+          const { id, source, target, relation_type: relationType } = relation
+          edges[id] = {
+            id,
+            source: source.id,
+            target: target.id,
+            type: relationType.id,
+          }
+          nodes[source.id] = {
+            id: source.id,
+            label: source.label,
+            type: 'Person',
+          }
+          nodes[target.id] = {
+            id: target.id,
+            label: target.label,
+            type: t1,
+          }
+          types.edges[relationType.id] = {
+            id: relationType.id,
+            label: relationType.label,
+          }
+          types.nodes['Person'] = {
+            id: 'Person',
+            label: 'Person',
+            color: 'hotpink',
+          }
+          types.nodes['Place'] = {
+            id: 'Place',
+            label: 'Place',
+            color: 'rebeccapurple',
+          }
+          types.nodes['Institution'] = {
+            id: 'Institution',
+            label: 'Institution',
+            color: 'green',
+          }
+        })
+        ReactDOM.render(
+          React.createElement(NetworkVisualization.Visualization, {
+            graph: {
+              edges,
+              nodes,
+              types,
+            },
+          }),
+          document.getElementById('visualization')
+        )
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }
+</script>
+<script type="text/javascript">
+  var dataurl = "/apis/api2/getrelatedplaces/?person_id=164563";
+  let lst_dates = []
+  let lst_long_lat = []
+  var map;
+  var date;
+  iconSettings = {
+    mapIconUrl: '<svg xmlns="http://www.w3.org/2000/svg"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>',
+    mapIconColor: '#cc756b',
+    // mapIconColorInnerCircle: '#fff',
+    //pinInnerCircleRadius: 48
+  },
+
+    // icon normal state
+    divIcon = L.divIcon({
+      className: "leaflet-data-marker",
+      html: L.Util.template(iconSettings.mapIconUrl, iconSettings),
+      iconAnchor: [12, 24],
+      iconSize: [24, 24],
+      popupAnchor: [0, -24]
+    }),
+
+    window.addEventListener("map:init", function (event) {
+      map = event.detail.map;
+      // Download GeoJSON data with Ajax
+      fetch(dataurl)
+        .then(function (resp) {
+          return resp.json();
+        })
+        .then(function (data) {
+          return data;
+        })
+        .then(function (data) {
+          var jsonLayer = L.geoJson(data, {
+            pointToLayer: function (feature, latlng) {
+              return L.marker(latlng, { icon: divIcon });
+            },
+            onEachFeature: function onEachFeature(feature, layer) {
+              var props = feature.properties;
+              let relations = "";
+              props.relations.forEach(function (element) {
+                relations += `<li>${element.relation}</li>`;
+                if (!lst_dates.includes(element.start_date) && element.start_date != null) {
+                  lst_dates.push(element.start_date)
+                };
+                if (!lst_dates.includes(element.end_date) && element.end_date != null) {
+                  lst_dates.push(element.end_date)
+                };
+                if (!lst_long_lat.includes(feature.geometry.coordinates)) {
+                  lst_long_lat.push(feature.geometry.coordinates)
+                }
+              });
+              var content = `<div><h3><a href=${props.url}>${props.name}</a></h3><p>${props.kind}<br/><ul class="maps-list">${relations}<ul></p></div>`;
+              layer.bindPopup(content);
+              layer.on('mouseover', e => {
+                window.eventBus.emit('apismap.mouseover', e);
+                e.target._icon.classList.add('activated')
+                for (f in e.target.feature.properties.relations) {
+                  let rel = e.target.feature.properties.relations[f]
+                  let d_obj = document.querySelector(`.spacetime-graph circle[relid='${rel.id}']`)
+                  if (d_obj) {
+                    d_obj.closest('div').classList.add('dot-hover')
+                    d_obj.classList.add('hover')
+                    document.querySelector(`.spacetime-graph circle[relid='${rel.id}'] + g.label-text`).classList.add('hover')
+                  }
+                }
+              });
+              layer.on('mouseout', e => {
+                e.target._icon.classList.remove('activated');
+                window.eventBus.emit('apismap.mouseout', e)
+                document.querySelectorAll('.spacetime-graph circle').forEach(c => { c.classList.remove('hover') })
+                document.querySelectorAll('.spacetime-graph g.label-text').forEach(c => { c.classList.remove('hover') })
+                document.querySelector('div.spacetime-graph').classList.remove('dot-hover')
+              }
+
+              )
+            }
+          });
+          jsonLayer.addTo(map);
+          var bounds = jsonLayer.getBounds();
+          if (JSON.stringify(bounds['_northEast']) === JSON.stringify(bounds['_southWest'])) {
+            map.setView(bounds['_northEast'], 12);
+          } else {
+            map.fitBounds(jsonLayer.getBounds());
+          }
+
+        })
+        .then(function () {
+          console.log('event issued');
+          window.eventBus.emit('apismap.marker.loaded')
+        })
+    });
+
+  async function add_histogis_shape() {
+    let colors_shapes = ['#302f2f', '#3388ff', '#229c41', '#b8252c', '#d1c847']
+    const featHistoGIS = []
+    let list_permalinks = [];
+    let histogis_url = new URL('https://histogis.acdh-dev.oeaw.ac.at/api/where-was')
+    const parsed_dates = lst_dates.map(d => Date.parse(d))
+    const min_date = Math.min(...parsed_dates)
+    const max_date = Math.max(...parsed_dates)
+    const ts = (max_date + min_date) / 2
+    date = new Date(ts)
+    const listHistoGIS = []
+    const preList = {}
+    let count_runs = 0
+
+    const hgis_requests = lst_long_lat.map(function (coords) {
+      histogis_url.search = new URLSearchParams({
+        lat: coords[1],
+        lng: coords[0],
+        when: date.toLocaleDateString('en-UK'),
+        page_size: 15
+      });
+      return fetch(histogis_url)
+        .then(res => res.json())
+        .then(res => listHistoGIS.push(...res.features))
+    })
+    await Promise.all(hgis_requests)
+    listHistoGIS.forEach(ft => {
+      var count = 0
+      let lst_perm = []
+      ft.properties.parents.forEach(pr => {
+        listHistoGIS.forEach(ft2 => {
+          let subst = ft2['@id'].replace(/^.*\/\/[^\/]+/, '')
+          if (pr.permalink === subst && !lst_perm.includes(subst)) {
+            count += 1
+            lst_perm.push(subst)
+          }
+        })
+      })
+      if (count in preList) {
+        if (!preList[count].some(ft3 => ft3['@id'] === ft['@id'])) {
+          preList[count].push(ft)
+        }
+      } else {
+        preList[count] = [ft,]
+      }
+    })
+    for (var idx in preList) {
+      let pn = `histogis${idx}`
+      map.createPane(pn);
+      map.getPane(pn).style.zIndex = parseInt(`4${idx}0`)
+
+      preList[idx].forEach(ft3 => {
+        let jsonLayer = L.geoJson(ft3, {
+          'pane': `histogis${idx}`,
+          'color': colors_shapes[idx]
+        })
+        jsonLayer.bindTooltip(
+          `${ft3.properties.name} (${ft3.properties.start_date} - ${ft3.properties.end_date})`,
+          {
+            permanent: false,
+            direction: 'center',
+            className: 'countryLabel'
+          }
+        );
+        featHistoGIS.push(jsonLayer)
+      })
+      const featGroupHistogis = L.featureGroup(featHistoGIS).addTo(map)
+      const bounds = featGroupHistogis.getBounds();
+      if (JSON.stringify(bounds['_northEast']) === JSON.stringify(bounds['_southWest'])) {
+        map.setView(bounds['_northEast'], 12);
+      } else {
+        map.fitBounds(featGroupHistogis.getBounds());
+      }
+    }
+
+  }
+
+  function minimize_map() {
+    window.location.href = window.location.origin + window.location.pathname
+  }
+
+  function move_map() {
+    const map_element = document.querySelector('div.inline-map')
+    const bio = document.querySelector('article.bio')
+    const biotext = document.querySelector('#main-bio-text')
+    const spacetime = document.querySelector('div#spacetime-graph-content')
+    const rightpane = document.querySelector('#right-pane > article')
+    const mapleaflet = map_element.querySelector('#main')
+    rightpane.insertBefore(spacetime, map_element)
+    let height_space_time = spacetime.offsetHeight
+    if (height_space_time > 500) {
+      mapleaflet.style.height = `${height_space_time}px`
+    } else {
+      mapleaflet.style.height = "500px"
+    }
+    spacetime.style.paddingTop = `${document.querySelector('div.entry-header').offsetHeight}px`
+
+    bio.insertBefore(map_element, biotext)
+    add_histogis_shape()
+    map.invalidateSize()
+    const caption = document.createElement("p")
+    caption.style.fontSize = '0.8em'
+    caption.style.fontStyle = 'italic'
+    caption.innerHTML = `Die Polygone werden dynamisch aus <a href="https://histogis.acdh.oeaw.ac.at">HistoGIS</a> erstellt. 
+    Es werden die administrativen Einheiten für die Position aller Marker zum Zeitpunkt ${date.toLocaleDateString('de-DE')} 
+    (Mitte der bekannten Lebensspanne) geladen.`
+    //caption.appendChild(tnode)
+    bio.insertBefore(caption, biotext)
+    let max_icon = document.querySelector('div.inline-map > a')
+    max_icon.setAttribute('onclick', 'minimize_map()')
+    max_icon.innerHTML = '<i data-feather="minimize-2"></i>'
+    feather.replace()
+    let url = new URL(window.location.href)
+    url.searchParams.set('mapview', 'true')
+    history.replaceState(null, 'Aigner, Paul', [url])
+  }
+  window.eventBus.on('spacetime.mouseover', e => {
+    let nm = e.detail[0][0].data.id
+    for (l in map._layers) {
+      if (!("feature" in map._layers[l])) {
+        continue
+      }
+      if (map._layers[l].feature.geometry.type === "Point") {
+        let lst_rels = map._layers[l].feature.properties.relations.map(x => (x.id))
+        if (map._layers[l].feature.geometry.type === "Point" && lst_rels.includes(nm)) {
+          map._layers[l]._icon.classList.add("activated")
+        }
+      }
+    }
+  })
+
+  window.eventBus.on('spacetime.mouseout', e => {
+    for (l in map._layers) {
+      if (!("feature" in map._layers[l])) {
+        continue
+      }
+      if (map._layers[l].feature.geometry.type === "Point") {
+        if (map._layers[l]._icon.classList.contains("activated")) {
+          map._layers[l]._icon.classList.remove("activated")
+        }
+      }
+    }
+
+  })
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const mapview = urlParams.get('mapview', false);
+    window.eventBus.on('apismap.marker.loaded', function () {
+      if (mapview) {
+        move_map();
+      }
+    }
+    )
+  });
+</script>
+
+    
+    
+</div>
+
+
+
+<readwise-tooltip-container></readwise-tooltip-container><div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" tabindex="-1" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev" aria-label="Previous image" href="http://localhost:8000/person/164563"></a><a class="lb-next" aria-label="Next image" href="http://localhost:8000/person/164563"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
